@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Home</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item *ngFor="let item of list_user">
+            <ion-avatar slot="start">
+                <img [src]="item.getAvatar()">
+            </ion-avatar>
+            <div slot="end">
+                <ion-label text-right>{{item.getFirstName()}}</ion-label>
+                <app-ratingstar [rating]="item.getRating()" [colorName]="'secondary'" ></app-ratingstar>
+            </div>
+            </ion-item>
+
+
+    </ion-list>
+</ion-content>
